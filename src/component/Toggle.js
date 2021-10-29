@@ -1,6 +1,7 @@
 import React from 'react'
 import '../assets/button.css'
 import axios from 'axios'
+import { ACTIVE_KEY } from '../config/config'
 export default function Toggle(props) {
     console.log(props.feedID)
     let testAPI = async (feedID, value) => {
@@ -11,7 +12,7 @@ export default function Toggle(props) {
                 value
             },
             headers: {
-                "X-AIO-Key": 'aio_CmRM41HnApNG8sWZxx3xM76ayeTl',
+                "X-AIO-Key": `${ACTIVE_KEY}`,
                 "Content-Type": 'application/json'
             }
         })
